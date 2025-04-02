@@ -18,7 +18,7 @@ const authLoggerSchema = new mongoose.Schema(
     },
     logInBy: {
       type: String,
-      enum: ["email", "phone"],
+      default: "email",
       required: true,
     },
     successful: {
