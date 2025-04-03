@@ -39,7 +39,7 @@ const updateProduct = async (productId, body) => {
 };
 const deleteProduct = async (productId) => {
   try {
-    const product = await productModel.findByIdAndDelete(productId);
+    const product = await productModel.softDelete(productId);
     return product;
   } catch (error) {
     throw error;
